@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "69412710305",
+    "project_id": "firebase-trackfit"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69412710305:android:8ef1ac4f1ff804f8",
+        "android_client_info": {
+          "package_name": "dev.pardeep.healthappointment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69412710305-u20rd49nt4f0of2s8dchilp46sfoac9t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.pardeep.healthappointment",
+            "certificate_hash": "933ee262f78955c1585eab39593a9ff659b8c82b"
+          }
+        },
+        {
+          "client_id": "69412710305-e5dc764njca2j96bmlsqr6femvr3p2fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiBhKvbtPipDhHbj76mf9nEz_TkjcUYHY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

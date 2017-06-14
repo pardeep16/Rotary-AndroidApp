@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+   >
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:src="@drawable/appointment"
+    android:background="@android:color/transparent"
+    android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Welcome"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="To the most Progressive tool in the\n Healthcare Industry"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/primary"
+        android:gravity="center"/>
+</LinearLayout>

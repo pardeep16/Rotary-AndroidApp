@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+
+    tools:context="dev.pardeep.medimojoapp.LoginActivity">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/white"
+                android:textSize="50sp"
+                android:fontFamily="sans-serif"
+                android:text="trackFit"
+               />
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:background="@drawable/edittext"
+                android:layout_marginTop="50dp"
+                android:text="Sign in with Google"
+                android:textColor="@color/primary_dark"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:drawableLeft="@drawable/google"
+                android:paddingLeft="20dp"
+                android:paddingRight="30dp"
+                android:textSize="15sp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+       <!-- <FrameLayout
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_marginRight="5dp"
+                android:layout_width="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@android:color/transparent"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/usernameSignIn"
+                android:inputType="text"
+                android:hint="EmailId/Username/MobileNo"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_width="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:background="@android:color/transparent"
+
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/passwordSignin"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="10dp"
+
+                    android:hint="Password"
+                    android:paddingLeft="10dp"
+
+                    />
+            </LinearLayout>
+            </LinearLayout>
+            </FrameLayout>-->
+
+            <Button
+                android:id="@+id/mobilesignin"
+                android:layout_width="match_parent"
+                android:background="@drawable/borderview"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:text="Enter your mobile number"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms &amp; Conditions Apply"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

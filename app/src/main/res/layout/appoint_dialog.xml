@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/borderview"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:text="Need an appointment?"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow the simple steps below and get your appointment fixed online!"
+                android:layout_margin="20dp"
+                android:textColor="@color/LightBlue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                android:text="1.  Verify yourself\n
+2.  Choose Department/Doctor\n
+3.  Select date of appointment\n
+4.  Get confirmation mail\n"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Proceed"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:id="@+id/proceedbutton"
+                android:background="@color/primary_dark"
+                android:layout_margin="20dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

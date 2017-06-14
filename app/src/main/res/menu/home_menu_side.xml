@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            <item android:id="@+id/profile" android:title="Profile"
+                android:icon="@drawable/user_green"
+                android:enabled="true"
+                />
+            <item android:id="@+id/aboutus" android:title="About Us"
+                android:icon="@drawable/camera_shutter"
+                android:enabled="true"
+                />
+
+            <item android:id="@+id/contact" android:title="Contact Us"
+                android:icon="@drawable/calendar_new"
+                android:enabled="true"
+                />
+            <item android:id="@+id/signout" android:title="Sign Out"
+                android:icon="@drawable/logout"
+                android:enabled="true"
+                />
+
+
+</menu>

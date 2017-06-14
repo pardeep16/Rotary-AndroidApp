@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">@android:color/black</color>
+    <color name="dot_dark_screen2">@android:color/black</color>
+    <color name="dot_dark_screen3">@android:color/black</color>
+    <color name="dot_dark_screen4">@android:color/black</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#56cc54</color>
+    <color name="dot_light_screen2">#56cc54</color>
+    <color name="dot_light_screen3">#56cc54</color>
+    <color name="dot_light_screen4">#56cc54</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+
+    <color name="Red">#FF2010</color>
+    <color name="color1">#66ffb2</color>
+    <color name="pinklight">#faceff</color>
+    <color name="gcolor">#f2f2f2</color>
+    <color name="g1color">#c0c0c0</color>
+    <color name="colo">#0fc0fc</color>
+    <color name="LightBlue">#30A9F4</color>
+    <color name="Teal">#009688</color>
+    <color name="white">#ffffffff</color>
+    <color name="darkwhite">#ffeeeeee</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="semitransparent">#88000000</color>
+    <color name="orange">#ffff8800</color>
+    <color name="light_orange">#ffe27d18</color>
+    <color name="light_blue">#ff00a2e8</color>
+    <color name="black">#ff000000</color>
+    <color name="menuButtonColor">#ffea8e44</color>
+    <color name="themeColor">#56cc54</color>
+
+    <color name="primary">#FFC107</color>
+    <color name="primary_dark">#FFA000</color>
+    <color name="primary_light">#FFECB3</color>
+    <color name="accent">#FFC107</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#BDBDBD</color>
+</resources>
