@@ -98,7 +98,7 @@ public class WelcomeScreen extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(WelcomeScreen.this,HomeScreen.class));
+                startActivity(new Intent(WelcomeScreen.this,LoginActivity.class));
             }
         });
 

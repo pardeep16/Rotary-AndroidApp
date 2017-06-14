@@ -41,7 +41,8 @@
         </activity>
         <activity
             android:name=".BookAppointmentAct"
-            android:label="@string/title_activity_book_appointment" >
+            android:label="@string/title_activity_book_appointment"
+            android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
             android:name=".ViewAppointmentsAct"
