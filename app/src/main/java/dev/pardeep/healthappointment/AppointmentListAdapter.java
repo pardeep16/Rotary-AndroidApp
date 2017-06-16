@@ -25,17 +25,17 @@ public class AppointmentListAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return 0;
+        return arrayList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return getItem(i);
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
@@ -49,8 +49,8 @@ public class AppointmentListAdapter extends BaseAdapter {
         TextView department=(TextView)view.findViewById(R.id.department);
         appointment_id.setText(arrayList.get(position).getApp_id());
         doc_name.setText(arrayList.get(position).getDoc_name());
-        doc_contact.setText(arrayList.get(position).getDoc_name());
-        app_date.setText((CharSequence) arrayList.get(position).getApp_date());
+        doc_contact.setText(arrayList.get(position).getDoc_contact());
+        app_date.setText( arrayList.get(position).getApp_date());
         department.setText(arrayList.get(position).getDepartment());
         return view;
     }

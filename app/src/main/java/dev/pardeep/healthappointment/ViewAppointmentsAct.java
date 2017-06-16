@@ -1,16 +1,14 @@
 package dev.pardeep.healthappointment;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
-
-import static dev.pardeep.healthappointment.R.color.icons;
-import static dev.pardeep.healthappointment.R.id.description;
 
 public class ViewAppointmentsAct extends AppCompatActivity {
 
@@ -27,8 +25,12 @@ public class ViewAppointmentsAct extends AppCompatActivity {
         listViewMain=(ListView)findViewById(R.id.listView);
         arrayList=new ArrayList<>();
 
-        for (int i=0;i<app_id.length;i++){
-            arrayList.add(new AppointmentsListContent(doc_contact[i],app_id[i],doc_name[i],department[i],app_date[i]));
+        for (int i=0;i<1;i++){
+          //  arrayList.add(new AppointmentsListContent(doc_contact[i],app_id[i],doc_name[i],department[i],app_date[i]));
+
+                Toast.makeText(ViewAppointmentsAct.this, "call 1", Toast.LENGTH_SHORT).show();
+                arrayList.add(new AppointmentsListContent("740555421","1210","abc","dentist", ""));
+
         }
 
         AppointmentListAdapter listAdapter=new AppointmentListAdapter();
