@@ -2,13 +2,24 @@ package dev.pardeep.healthappointment;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+
+import dev.pardeep.healthappointment.Fragments.ChooseDoctorFragment;
 
 public class BookAppointmentAct extends AppCompatActivity {
+
+    EditText editTextUserName,editTextUserEmail,editTextPhone,editTextAge;
+    RadioGroup radioGroup;
+    Button buttonNext;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +28,41 @@ public class BookAppointmentAct extends AppCompatActivity {
 
 
         showAppointMentDialog();
+
+        editTextUserName=(EditText)findViewById(R.id.username);
+        editTextUserEmail=(EditText)findViewById(R.id.emailid);
+        editTextPhone=(EditText)findViewById(R.id.mobilenumber);
+        editTextAge=(EditText)findViewById(R.id.userage);
+        radioGroup=(RadioGroup)findViewById(R.id.radiogroup);
+
+        buttonNext=(Button)findViewById(R.id.proceednextbutton);
+
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(editTextUserName.getText().toString().equalsIgnoreCase("")){
+                    editTextUserName.setError("Enter your name");
+                }
+                else if(editTextUserEmail.getText().toString().equalsIgnoreCase("")){
+                    editTextUserEmail.setError("Enter your email");
+                }
+                else if(editTextPhone.getText().toString().length()!=10){
+                    editTextPhone.setError("Enter correct mob number");
+                }
+                else if(editTextAge.getText().toString().equalsIgnoreCase("")){
+                    editTextAge.setError("Incorrect Age");
+                }
+                else {
+                    startFragment(new ChooseDoctorFragment());
+                }
+            }
+        });
+
+
+    }
+
+    private void startFragment(Fragment chooseDoctorFragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,chooseDoctorFragment).addToBackStack("fragment").setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 
     private void showAppointMentDialog() {
