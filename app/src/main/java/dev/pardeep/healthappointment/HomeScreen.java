@@ -81,6 +81,9 @@ public class HomeScreen extends AppCompatActivity {
                     case 0:
                         startActivity(new Intent(HomeScreen.this,BookAppointmentAct.class));
                         break;
+                    case 1:
+                        startActivity(new Intent(HomeScreen.this,ViewAppointmentsAct.class));
+                        break;
                     default:
                 }
 

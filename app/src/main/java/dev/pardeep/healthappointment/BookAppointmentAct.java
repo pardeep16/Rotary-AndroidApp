@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import dev.pardeep.healthappointment.Fragments.ChooseDoctorFragment;
 
 public class BookAppointmentAct extends AppCompatActivity {
@@ -43,7 +46,7 @@ public class BookAppointmentAct extends AppCompatActivity {
                 if(editTextUserName.getText().toString().equalsIgnoreCase("")){
                     editTextUserName.setError("Enter your name");
                 }
-                else if(editTextUserEmail.getText().toString().equalsIgnoreCase("")){
+                else if(!validateEmail(editTextUserEmail.getText().toString())){
                     editTextUserEmail.setError("Enter your email");
                 }
                 else if(editTextPhone.getText().toString().length()!=10){
@@ -59,6 +62,17 @@ public class BookAppointmentAct extends AppCompatActivity {
         });
 
 
+    }
+
+    private boolean validateEmail(String email) {
+        try {
+            Pattern pattern = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+            Matcher matcher = pattern.matcher(email);
+            return matcher.matches();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     private void startFragment(Fragment chooseDoctorFragment) {

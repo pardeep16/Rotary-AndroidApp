@@ -1,16 +1,42 @@
 package dev.pardeep.healthappointment;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
 
 public class ViewAppointmentsAct extends AppCompatActivity {
+
+    ListView listViewMain;
+    ArrayList<AppointmentsListContent> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_appointments);
+
+
+        listViewMain=(ListView)findViewById(R.id.listView);
+        arrayList=new ArrayList<>();
+
+        for (int i=0;i<1;i++){
+          //  arrayList.add(new AppointmentsListContent(doc_contact[i],app_id[i],doc_name[i],department[i],app_date[i]));
+
+                Toast.makeText(ViewAppointmentsAct.this, "call 1", Toast.LENGTH_SHORT).show();
+                arrayList.add(new AppointmentsListContent("740555421","1210","abc","dentist", ""));
+
+        }
+
+        AppointmentListAdapter listAdapter=new AppointmentListAdapter();
+        AppointmentListAdapter.setArrayList(arrayList);
+        listViewMain.setAdapter(listAdapter);
+
+
     }
 
     @Override
