@@ -27,10 +27,18 @@ public class SplashScreen extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
+
                     Intent intent=new Intent(SplashScreen.this,WelcomeScreen.class);
-                    Bundle bndlanimation =
-                            ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.trans_left_in, R.anim.trans_left_out).toBundle();
-                    startActivity(intent,bndlanimation);
+                    if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN){
+                        Bundle bndlanimation =
+                                ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.trans_left_in, R.anim.trans_left_out).toBundle();
+
+                        startActivity(intent,bndlanimation);
+                    }
+                    else {
+                        startActivity(intent);
+                    }
+
                 }
             }
         };

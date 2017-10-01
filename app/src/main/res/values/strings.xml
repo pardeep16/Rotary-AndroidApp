@@ -14,4 +14,17 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_show_timings_with_date">ShowTimingsWithDate</string>
+    <string name="title_activity_opd_counter">OpdCounter</string>
+    <string name="opdtext1">Book Your OPD Running counter Is</string>
+    <string name="title_activity_insta_mojo_payment">InstaMojoPayment</string>
+    <string name="card_number">Card Number</string>
+    <string name="mm_yy">MM/yy</string>
+    <string name="card_holders_name">Name</string>
+    <string name="cvv">CVV</string>
+    <string name="proceed">Proceed with Card</string>
+    <string name="title_activity_choose_payment_options">ChoosePaymentOptions</string>
+    <string name="title_activity_payment_status">PaymentStatus</string>
+    <string name="title_activity_mobile_verify">MobileVerifyActivity</string>
+    <string name="title_activity_select_profile_for_opd">SelectProfileForOpd</string>
 </resources>

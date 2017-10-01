@@ -13,9 +13,9 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textColor="@android:color/white"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:fontFamily="sans-serif"
-            android:text="trackFit"
+            android:text="Rotary Hospital Ambala"
             android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </RelativeLayout>

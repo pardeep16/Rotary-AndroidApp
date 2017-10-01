@@ -1,0 +1,47 @@
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="dev.pardeep.healthappointment.Fragments.CompleteProfileGmail">
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary">
+            <LinearLayout
+                android:id="@+id/linearLayoutCompleteProf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:text="Complete Your Profile"
+                    android:layout_margin="20dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"
+                    android:id="@+id/mobileNumberEditText"
+                    android:hint="Enter mobile number"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/continueButton"
+                android:textColor="@color/white"
+                android:background="@color/primary_dark"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </FrameLayout>
+
+

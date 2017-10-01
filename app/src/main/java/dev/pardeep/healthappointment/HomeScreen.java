@@ -1,8 +1,12 @@
 package dev.pardeep.healthappointment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.Menu;
@@ -13,6 +17,8 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+
+import dev.pardeep.healthappointment.Fragments.ProfileFragment;
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -25,7 +31,7 @@ public class HomeScreen extends AppCompatActivity {
 
     private static ArrayList<HomeListContent> arrayList=null;
 
-    private static String[] titles={"Book an Appointment","View/Cancel Appointment","Ask any Query","Lab Reports"};
+    private static String[] titles={"Book an OPD","View/Cancel Appointment","Ask any Query","Lab Reports"};
 
     private static int[] icons={R.drawable.calender,R.drawable.cancelsub,R.drawable.askques,R.drawable.labreport};
 
@@ -58,13 +64,22 @@ public class HomeScreen extends AppCompatActivity {
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu=new PopupMenu(HomeScreen.this,menuButton);
+                PopupMenu popupMenu = new PopupMenu(HomeScreen.this, menuButton);
 
-                popupMenu.getMenuInflater().inflate(R.menu.home_menu_side,popupMenu.getMenu());
+                popupMenu.getMenuInflater().inflate(R.menu.home_menu_side, popupMenu.getMenu());
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.profile:
+                                showProfileFrag(new ProfileFragment());
+                                break;
+                            case R.id.signout:
+                                logOut();
+                                break;
+
+                        }
                         return true;
                     }
                 });
@@ -79,7 +94,9 @@ public class HomeScreen extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        startActivity(new Intent(HomeScreen.this,BookAppointmentAct.class));
+                      //  startActivity(new Intent(HomeScreen.this,BookAppointmentAct.class));
+                        startActivity(new Intent(HomeScreen.this,SelectProfileForOpd.class));
+
                         break;
                     case 1:
                         startActivity(new Intent(HomeScreen.this,ViewAppointmentsAct.class));
@@ -90,7 +107,68 @@ public class HomeScreen extends AppCompatActivity {
             }
         });
 
+        if(sharedPreferences.getString("phone",null).toString().equalsIgnoreCase("null") || sharedPreferences.getString("phone",null).toString().length()<=0){
+            //changeFragment(new CompleteProfileGmail());
+            startActivity(new Intent(HomeScreen.this,MobileVerifyActivity.class));
+        }
+        else if(!sharedPreferences.contains("gmail_token") || sharedPreferences.getString("emailid",null).toString().equalsIgnoreCase("null")){
+
+
+        }
     }
+
+    private void changeFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout,fragment).addToBackStack("fragmentphone").setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+
+    }
+
+    private void showProfileFrag(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout,fragment).addToBackStack("fragment").setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+    }
+
+    private void logOut() {
+        AlertDialog.Builder alertDialog=new AlertDialog.Builder(this);
+        alertDialog.setTitle("SignOut");
+        alertDialog.setIcon(R.drawable.logout);
+        alertDialog.setMessage("Do you Confirm to SignOut?");
+        alertDialog.setPositiveButton("Sign Out", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                removeAllData();
+            }
+        });
+        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert=alertDialog.create();
+        alert.show();
+
+    }
+
+    private void removeAllData() {
+        try {
+            SharedPreferences sharedPreferences;
+            sharedPreferences=this.getSharedPreferences(LoginActivity.getSharedProfile(),0);
+            sharedPreferences.edit().clear().commit();
+
+            sharedPreferences=this.getSharedPreferences(SharedPrefManager.getSaveprofile(),0);
+            sharedPreferences.edit().clear().commit();
+
+            Intent intent=new Intent(HomeScreen.this,LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,14 +195,21 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        if(sharedPreferences.getBoolean("login",false)){
+
+        super.onBackPressed();
+        /*int val = getSupportFragmentManager().getBackStackEntryCount();
+        if(val>=1){
+            getSupportFragmentManager().popBackStack();
+            return;
+        }
+        if(sharedPreferences.getBoolean("login", false)){
             Intent a = new Intent(Intent.ACTION_MAIN);
             a.addCategory(Intent.CATEGORY_HOME);
-            a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(a);
-        }
-        else {
-            super.onBackPressed();
-        }
+        }*/
+        /*else {
+
+        }*/
+
     }
 }

@@ -3,9 +3,9 @@
     android:thickness="0dp"
     android:shape="rectangle">
     <stroke android:width="2dp"
-        android:color="@color/themeColor"/>
+        android:color="@color/primary_dark"/>
     <corners
-        android:radius="5dp"
+        android:radius="2dp"
         ></corners>
     <gradient
         android:startColor="@android:color/white"

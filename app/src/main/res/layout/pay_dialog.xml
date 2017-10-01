@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.pardeep.healthappointment.OpdCounter">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your OPD counter is :"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="@android:color/black">
+        </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="08"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/opd_counter"
+        />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Proceed Payment"
+        android:padding="10dp"
+        android:id="@+id/paymentbutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_blue_light"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:padding="10dp"
+        android:id="@+id/paymentcancelbutton"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_red_light" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textViewpayamount"
+        android:text="Pay Amount : Rs 10"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        />
+</LinearLayout>
+        </ScrollView>
+    </RelativeLayout>

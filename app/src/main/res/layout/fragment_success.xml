@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+
+    tools:context="dev.pardeep.healthappointment.Fragments.SuccessFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="40dp"
+               android:background="@drawable/success"
+               android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Payment Success"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/opdid"
+                android:contextClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="100dp"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:text="OPD ID:-"/>
+            <TextView
+                android:id="@+id/patientid"
+                android:contextClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="50dp"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:text="Patient ID:-"/>
+            <TextView
+                android:id="@+id/paymentid"
+                android:contextClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="50dp"
+                android:textSize="25sp"
+                android:textColor="@android:color/black"
+                android:text="Payment ID:-"/>
+            <TextView
+                android:id="@+id/emailtextnote"
+                android:contextClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="50dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:text="Note:- All details regarding OPD also send to your email.Please confirm your OPD booking"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

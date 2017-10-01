@@ -1,0 +1,73 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="dev.pardeep.healthappointment.Fragments.MobileNoSignIn">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/primary"
+      >
+      <LinearLayout
+          android:id="@+id/linearlayoutmobile"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+
+          android:gravity="center_horizontal"
+          android:layout_marginTop="100dp"
+          android:textColor="@color/white"
+          android:textSize="50sp"
+          android:fontFamily="sans-serif"
+          android:text="Rotary Ambala"
+          />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginTop="50dp"
+          android:layout_gravity="center_vertical"
+          android:gravity="center_vertical"
+          android:layout_marginRight="20dp"
+          android:layout_marginLeft="20dp"
+          >
+          <TextView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:gravity="center"
+              android:text="+91"
+              android:background="@drawable/borderview"
+              android:textSize="20sp"
+              android:textColor="@color/white"/>
+          <EditText
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:hint="Enter mobile number"
+              android:inputType="number"
+              android:maxLength="10"
+              android:textColor="@color/white"
+              android:paddingLeft="10dp"
+              android:id="@+id/edittextmobile"
+              android:background="@drawable/borderview"/>
+      </LinearLayout>
+      </LinearLayout>
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/buttonmobilesignin"
+          android:layout_margin="10dp"
+          android:text="Continue"
+          android:textSize="18sp"
+          android:textAllCaps="false"
+          android:textColor="@color/white"
+          android:background="@color/primary_dark"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true" />
+  </RelativeLayout>
+
+</FrameLayout>

@@ -2,12 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+
     tools:context="dev.pardeep.healthappointment.BookAppointmentAct">
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/framelayout">
 <LinearLayout
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -37,6 +39,7 @@
        android:layout_height="match_parent"
        android:layout_marginTop="?attr/actionBarSize">
        <LinearLayout
+           android:id="@+id/linearlayoutmain"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:orientation="vertical">
@@ -47,6 +50,17 @@
                android:textSize="22sp"
                android:textColor="@color/black"
                android:layout_margin="20dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Patient Id:-"
+               android:textSize="18sp"
+               android:id="@+id/patientId"
+               android:textColor="@color/black"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"/>
            <LinearLayout
 
                android:orientation="horizontal"
@@ -61,15 +75,17 @@
                    android:layout_height="20dp"
                    android:layout_gravity="center_horizontal|center_vertical"
                    android:background="@android:color/transparent"
-                   android:src="@drawable/man_user"
+                   android:src="@drawable/avatar"
                    android:layout_centerVertical="true"
                    android:layout_alignParentLeft="true"
                    android:layout_alignParentStart="true" />
                <EditText
                    android:id="@+id/username"
                    android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
+                   android:layout_height="45dp"
                    android:hint="Enter your name"
+                   android:textColor="@android:color/black"
+                   android:textCursorDrawable="@null"
                    android:inputType="text"
                    android:paddingLeft="10dp"
 
@@ -90,16 +106,16 @@
                    android:layout_height="20dp"
                    android:layout_gravity="center_horizontal|center_vertical"
                    android:background="@android:color/transparent"
-                   android:src="@drawable/email_ic"
-                   android:layout_centerVertical="true"
-                   android:layout_alignParentLeft="true"
-                   android:layout_alignParentStart="true" />
+                   android:src="@drawable/mail"
+                    />
 
                <EditText
                    android:id="@+id/emailid"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="textEmailAddress"
+                   android:textColor="@android:color/black"
+                   android:textCursorDrawable="@null"
                    android:layout_marginTop="10dp"
                    android:hint="Email ID"
                    android:paddingLeft="10dp"
@@ -123,15 +139,15 @@
                    android:layout_gravity="center_horizontal|center_vertical"
                    android:background="@android:color/transparent"
                    android:src="@drawable/contact_mob"
-                   android:layout_centerVertical="true"
-                   android:layout_alignParentLeft="true"
-                   android:layout_alignParentStart="true" />
+                   />
 
                <EditText
                    android:id="@+id/mobilenumber"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:inputType="number"
+                   android:textColor="@android:color/black"
+                   android:textCursorDrawable="@null"
                    android:layout_marginTop="10dp"
                    android:hint="Mobile Number"
                    android:maxLength="10"
@@ -153,17 +169,18 @@
                    android:layout_width="20dp"
                    android:layout_marginTop="5dp"
                    android:layout_height="20dp"
+
                    android:layout_gravity="center_horizontal|center_vertical"
                    android:background="@android:color/transparent"
-                   android:src="@drawable/man_user"
-                   android:layout_centerVertical="true"
-                   android:layout_alignParentLeft="true"
-                   android:layout_alignParentStart="true" />
+                   android:src="@drawable/birth"
+                    />
                <EditText
                    android:id="@+id/userage"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:hint="Enter your Age"
+                   android:textColor="@android:color/black"
+                   android:textCursorDrawable="@null"
                    android:inputType="number"
                    android:maxLength="3"
                    android:paddingLeft="10dp"

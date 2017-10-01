@@ -9,19 +9,24 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_SMS" />
+    <uses-permission-sdk-23 android:name="android.permission.RECEIVE_SMS" />
 
     <meta-data
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".SplashScreen"
-            android:label="Health Appointment"
             android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,18 +36,18 @@
         </activity>
         <activity
             android:name=".HomeScreen"
-            android:label="@string/app_name" >
-
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name=".WelcomeScreen"
             android:noHistory="true" />
-        <activity android:name=".LoginActivity" >
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name=".BookAppointmentAct"
-            android:label="@string/title_activity_book_appointment"
-            android:windowSoftInputMode="adjustPan">
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name=".ViewAppointmentsAct"
@@ -51,6 +56,39 @@
         <activity
             android:name=".LabReportsAct"
             android:label="@string/title_activity_lab_reports" >
+        </activity>
+        <activity
+            android:name=".OtpVerificationActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".ShowTimingsWithDate"
+            android:label="@string/title_activity_show_timings_with_date" >
+        </activity>
+        <activity
+            android:name=".OpdCounter"
+            android:label="@string/title_activity_opd_counter" >
+        </activity>
+        <activity
+            android:name=".InstaMojoPayment"
+            android:label="@string/title_activity_insta_mojo_payment" >
+        </activity>
+        <activity
+            android:name=".PaymentActivities.ChoosePaymentOptions"
+            android:label="@string/title_activity_choose_payment_options" >
+        </activity>
+        <activity
+            android:name=".PaymentStatus"
+            android:label="@string/title_activity_payment_status" >
+        </activity>
+        <activity
+            android:name=".MobileVerifyActivity"
+            android:label="@string/title_activity_mobile_verify" >
+        </activity>
+        <activity
+            android:name=".SelectProfileForOpd"
+            android:label="@string/title_activity_select_profile_for_opd"
+            android:noHistory="true">
         </activity>
     </application>
 

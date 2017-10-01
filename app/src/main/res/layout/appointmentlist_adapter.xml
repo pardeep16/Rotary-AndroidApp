@@ -7,93 +7,95 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="12dp"
         android:layout_marginTop="20dp"
-        android:layout_weight="0.15">
-
-        <TextView
-            android:id="@+id/contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:fontFamily="sans-sarif"
-            android:text="Contact"
-            android:textSize="14sp"
-            android:layout_alignTop="@+id/icon"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignLeft="@+id/doc_name"
-            android:layout_alignStart="@+id/doc_name" />
-
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="20dp"
+        >
         <ImageView
-            android:id="@+id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/calender" />
-
+            android:id="@+id/icon"
+            android:src="@drawable/calender"
+            android:layout_alignBottom="@+id/textviewappstatus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
         <TextView
-            android:id="@+id/app_id"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginBottom="10dp"
+            android:id="@+id/textViewid"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text="App.Id"
             android:layout_marginLeft="10dp"
-
-            android:layout_toRightOf="@+id/icon"
-            android:fontFamily="sans-sarif"
-            android:text="Appointment Id"
-            android:textColor="@android:color/black"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/doc_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_toEndOf="@+id/icon"
-
             android:layout_toRightOf="@+id/icon"
-            android:fontFamily="sans-sarif"
-            android:text="Doctor Name"
-            android:textSize="14sp" />
-
+            android:layout_toEndOf="@+id/icon" />
         <TextView
-            android:id="@+id/app_date"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:fontFamily="sans-sarif"
             android:text="Date"
-            android:textSize="14sp"
-            android:layout_alignBottom="@+id/app_id"
-            android:layout_alignLeft="@+id/app_id"
-            android:layout_alignStart="@+id/app_id"
-            android:layout_marginLeft="143dp"
-            android:layout_marginStart="143dp" />
-
+            android:id="@+id/textviewdate"
+            android:textColor="@color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"/>
         <TextView
-            android:id="@+id/department"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Appointment Details:"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/primary_dark"
+            android:layout_below="@+id/textviewdate"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_toEndOf="@+id/icon"
+            android:id="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textviewappstatus"
+            android:text="Status"
+            android:layout_marginTop="5dp"
 
-            android:fontFamily="sans-sarif"
-            android:text="Department"
-            android:textSize="14sp"
-            android:layout_alignBottom="@+id/icon"
+            android:layout_below="@+id/textView"
             android:layout_alignLeft="@+id/textView"
             android:layout_alignStart="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textviewapptime"
+            android:text="Time"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/textviewappstatus"
+            android:layout_alignLeft="@+id/textviewappstatus"
+            android:layout_alignStart="@+id/textviewappstatus" />
 
-        <ImageView
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:src="@drawable/rightarr"
-            android:layout_below="@+id/department"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:id="@+id/textviewpayment"
+            android:layout_marginTop="10dp"
+            android:layout_alignBottom="@+id/textviewapptime"
+            android:layout_alignLeft="@+id/textviewapptime"
+            android:layout_alignStart="@+id/textviewapptime" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/buttoncancel"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@color/white"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/textviewpayment"
+            android:layout_below="@+id/textviewappstatus" />
     </RelativeLayout>
 </LinearLayout>

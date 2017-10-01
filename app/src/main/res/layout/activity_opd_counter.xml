@@ -1,0 +1,68 @@
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:id="@+id/relativelayout"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.pardeep.healthappointment.OpdCounter">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/opdtext1"
+           android:textSize="18sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:textColor="@android:color/black"
+           android:layout_marginTop="25dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/doc_name"
+            android:text="Doctor Name"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="08"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="30dp"
+            android:id="@+id/opd_counter"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note : Counter Update Automatically.Your OPD is 1 increment than counter value."
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book OPD"
+            android:id="@+id/bookopdbutton"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_blue_light"/>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+</FrameLayout>

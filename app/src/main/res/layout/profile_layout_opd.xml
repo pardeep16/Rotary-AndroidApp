@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:layout_margin="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/avatar"
+            android:id="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Patient Id:-1012552210"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/textViewId"
+            android:layout_above="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:id="@+id/textViewName"
+            android:layout_below="@+id/textViewId"
+            android:layout_alignLeft="@+id/textViewId"
+            android:layout_alignStart="@+id/textViewId" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="15sp"
+            android:id="@+id/textViewAge"
+            android:layout_below="@+id/textViewName"
+            android:layout_alignLeft="@+id/textViewName"
+            android:layout_alignStart="@+id/textViewName" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="15sp"
+            android:id="@+id/textViewGender"
+            android:layout_below="@+id/textViewName"
+            android:layout_toRightOf="@+id/textViewName"
+            android:layout_toEndOf="@+id/textViewName" />
+    </RelativeLayout>
+</LinearLayout>

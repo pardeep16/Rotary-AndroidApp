@@ -44,15 +44,15 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
-       /* sharedPreferences=this.getSharedPreferences(intro,0);
+        sharedPreferences=this.getSharedPreferences(intro,0);
         if(sharedPreferences.contains("viewed")){
-            startActivity(new Intent(WelcomeScreen.this,HomeScreen.class));
+            startActivity(new Intent(WelcomeScreen.this,LoginActivity.class));
         }
         else {
             editor=sharedPreferences.edit();
             editor.putBoolean("viewed",true);
             editor.commit();
-        }*/
+        }
 
 
 
